@@ -24,5 +24,5 @@ databaseChangeLog:
                   constraints:
                     nullable: false
               - column:
-                  name: book_amounts
+                  name: available book_amounts
                   type: integer
