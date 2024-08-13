@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-members-table
+      author: sonia_baranova
+      changes:
+        - createTable:
+            tableName: members
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: membership_dates
+                  type: date
+                  constraints:
+                    nullable: false
+              - column:
+                  name: book_amounts
+                  type: integer

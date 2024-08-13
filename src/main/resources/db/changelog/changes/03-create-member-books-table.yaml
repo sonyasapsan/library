@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-member-books-table
+      author: sonia_baranova
+      changes:
+        - createTable:
+            tableName: member_books
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: member_id
+                  type: bigint
+                  constraints:
+                    references: members(id)
+                    foreignKeyName: fk_member_books_member
+              - column:
+                  name: book_id
+                  type: bigint
+                  constraints:
+                    references: books(id)
+                    foreignKeyName: fk_member_books_book
