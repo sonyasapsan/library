@@ -1,4 +1,7 @@
 package org.test_task.dto.member;
 
-public record CreateMemberRequestDto(String amount) {
+import jakarta.validation.constraints.NotBlank;
+
+public record CreateMemberRequestDto(@NotBlank
+                                     String name) {
 }

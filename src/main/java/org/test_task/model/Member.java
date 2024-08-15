@@ -1,6 +1,7 @@
 package org.test_task.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import jakarta.annotation.PostConstruct;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -9,7 +10,9 @@ import org.springframework.beans.factory.annotation.Value;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -25,7 +28,6 @@ public class Member {
     @Column(nullable = false, name = "membership_dates")
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate membershipDate;
-    @Value("${book.amount}")
     @Column(name = "available book_amounts")
     private int availableBookAmount;
     @EqualsAndHashCode.Exclude
@@ -35,5 +37,5 @@ public class Member {
             name = "member_books",
             joinColumns = @JoinColumn(name = "member_id"),
             inverseJoinColumns = @JoinColumn(name = "book_id"))
-    private Set<Book> books = new HashSet<>();
+    private List<Book> books = new ArrayList<>();
 }
