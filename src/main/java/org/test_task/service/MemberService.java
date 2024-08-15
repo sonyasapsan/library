@@ -5,7 +5,6 @@ import org.test_task.dto.book.BookDto;
 import org.test_task.dto.book.CreateBookRequestDto;
 import org.test_task.dto.member.CreateMemberRequestDto;
 import org.test_task.dto.member.MemberDto;
-
 import java.util.List;
 
 public interface MemberService {

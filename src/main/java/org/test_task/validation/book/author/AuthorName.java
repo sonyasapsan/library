@@ -3,7 +3,6 @@ package org.test_task.validation.book.author;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
 import org.test_task.validation.book.title.TitleValidator;
-
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
