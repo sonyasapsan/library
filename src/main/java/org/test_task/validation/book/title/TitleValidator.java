@@ -5,7 +5,7 @@ import jakarta.validation.ConstraintValidatorContext;
 import java.util.regex.Pattern;
 
 public class TitleValidator implements ConstraintValidator<Title, String> {
-    private static final Pattern PATTERN_OF_TITLE = Pattern.compile("^[A-Z].{2,}$\n");
+    private static final Pattern PATTERN_OF_TITLE = Pattern.compile("^[A-Z].{2,}$");
 
     @Override
     public boolean isValid(String title, ConstraintValidatorContext constraintValidatorContext) {
