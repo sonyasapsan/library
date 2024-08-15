@@ -26,8 +26,8 @@ public class Member {
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate membershipDate;
     @Value("${book.amount}")
-    @Column(name = "book_amounts")
-    private int bookAmount;
+    @Column(name = "available book_amounts")
+    private int availableBookAmount;
     @EqualsAndHashCode.Exclude
     @ToString.Exclude
     @ManyToMany
