@@ -9,8 +9,6 @@ import org.springframework.stereotype.Repository;
 import org.test_task.model.Book;
 import org.test_task.model.Member;
 
-import java.util.List;
-
 @Repository
 public interface MemberRepository extends JpaRepository<Member, Long> {
     @Query("SELECT books FROM Member member JOIN member.books books WHERE member.name = :name")

@@ -2,8 +2,6 @@ package org.test_task.validation.book.author;
 
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
-import org.test_task.validation.book.title.Title;
-
 import java.util.regex.Pattern;
 
 public class AuthorNameValidator implements ConstraintValidator<AuthorName, String> {

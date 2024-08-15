@@ -2,8 +2,6 @@ package org.test_task.validation.book.title;
 
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
-
-
 import java.util.regex.Pattern;
 
 public class TitleValidator implements ConstraintValidator<Title, String> {
